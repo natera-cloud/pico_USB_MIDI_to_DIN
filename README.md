@@ -58,8 +58,8 @@ There are two ways to get this software onto your Raspberry Pi Pico. The easy me
 
 This is the simplest way to get started. / これが最も簡単な方法です。
 
-1.  Go to the [**Releases**](https://github.com/your-username/your-repo-name/releases) page of this repository. (このリポジトリの **Releases** ページに移動します)
-2.  Download the latest `.uf2` file (e.g., `pico-usb-midi-to-din-v1.0.uf2`). (最新の`.uf2`ファイルをダウンロードします)
+1.  Navigate to the [**`firmware` directory**](https://github.com/natera-cloud/pico_USB_MIDI_to_DIN/tree/main/firmware) in this repository. (このリポジトリ内の [**`firmware` フォルダ**](https://github.com/natera-cloud/pico_USB_MIDI_to_DIN/tree/main/firmware)に移動します)
+2.  Download the `.uf2` file from that folder. (フォルダの中にある`.uf2`ファイルをダウンロードします)
 3.  Hold down the **BOOTSEL** button on your Raspberry Pi Pico and connect it to your computer with a USB cable. (Picoの **BOOTSEL** ボタンを押しながら、PCにUSBケーブルで接続します)
 4.  It will appear on your computer as a new drive called `RPI-RP2`. (PC上に`RPI-RP2`という名前の新しいドライブが表示されます)
 5.  Drag and drop the downloaded `.uf2` file onto that `RPI-RP2` drive. (ダウンロードした`.uf2`ファイルを、そのドライブにドラッグ＆ドロップします)
