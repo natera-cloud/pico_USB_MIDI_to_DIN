@@ -1,6 +1,6 @@
 # Pico USB MIDI Host to DIN Converter
 
-![20251025_221914](https://github.com/user-attachments/assets/31108a98-0bf4-459a-a47a-6f7a53db9345)
+![20251025_221914](https://github.com/user-attachments/assets/1f704977-e57c-4b16-ab9a-bdc2a1154f98)
 
 
 A simple and effective USB MIDI Host to 5-pin DIN MIDI converter using a Raspberry Pi Pico (RP2040). This project allows you to connect modern USB-only MIDI controllers to legacy synthesizers or sound modules that only have traditional 5-pin DIN MIDI inputs.
@@ -34,7 +34,7 @@ Modern MIDI controllers often connect and are powered via a single USB cable. Ho
     * (Optional) USB Type-C breakout board (電源供給用USB-Cブレークアウト基板)
 * **Resistors / 抵抗:**
     * 2 x 220Ω (for MIDI OUT circuit / MIDI OUT回路用)
-    * (Optional) 2 x 5.1kΩ (for the Type-C breakout board to enable C-to-C power delivery / C to Cケーブルでの給電有効化用)
+    * (Optional) 1 x 5.1kΩ (for the Type-C breakout board to enable C-to-C power delivery / C to Cケーブルでの給電有効化用)
 
 ### Wiring / 配線
 
@@ -106,7 +106,7 @@ If you want to modify the code, you'll need to compile it yourself using the Ard
 
 #### Libraries / ライブラリ
 * **Adafruit TinyUSB Library**: Install this from the Arduino IDE's Library Manager (**Tools > Manage Libraries**). (Arduino IDEのライブラリマネージャからインストール)
-* **rppicomidi/usb_midi_host**: This library needs to be installed manually. Download the ZIP file from the [**GitHub repository**](https://github.com/rppicomidi/usb_midi_host) and install it in the Arduino IDE via **Sketch > Include Library > Add .ZIP Library...**. ([**リポジトリからZIPファイルをダウンロード**](https://github.com/rppicomidi/usb_midi_host)し、Arduino IDEの **スケッチ > ライブラリをインクルード > .ZIP形式のライブラリをインストール...** から手動でインストール)
+* **rppicomidi/usb_midi_host**: This library needs to be installed manually. **Version 1.1.7 is recommended for stable operation.** Download the ZIP file from the [**GitHub releases page**](https://github.com/rppicomidi/usb_midi_host/releases) and install it in the Arduino IDE via **Sketch > Include Library > Add .ZIP Library...**. (このライブラリは手動でインストールする必要があります。**動作の安定のため、バージョン1.1.7の使用を推奨します。**[**GitHubのリリースページ**](https://github.com/rppicomidi/usb_midi_host/releases)からZIPファイルをダウンロードし、Arduino IDEの **スケッチ > ライブラリをインクルード > .ZIP形式のライブラリをインストール...** からインストールしてください。)
 
 #### Uploading / 書き込み
 1.  Open the `.ino` sketch file in the Arduino IDE. (`.ino`ファイルをArduino IDEで開く)
