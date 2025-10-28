@@ -1,5 +1,6 @@
 # Pico USB MIDI Host to DIN Converter
 
+![20251025_221914](https://github.com/user-attachments/assets/31108a98-0bf4-459a-a47a-6f7a53db9345)
 
 
 A simple and effective USB MIDI Host to 5-pin DIN MIDI converter using a Raspberry Pi Pico (RP2040). This project allows you to connect modern USB-only MIDI controllers to legacy synthesizers or sound modules that only have traditional 5-pin DIN MIDI inputs.
@@ -30,10 +31,10 @@ Modern MIDI controllers often connect and are powered via a single USB cable. Ho
 * **MCU:** Raspberry Pi Pico or a compatible RP2040 board (e.g., RP2040 Zero)
 * **Connectors / コネクタ:**
     * 5-pin DIN female socket (5ピンDINメスソケット)
-    * USB Type-C breakout board (電源供給用USB-Cブレークアウト基板)
+    * (Optional) USB Type-C breakout board (電源供給用USB-Cブレークアウト基板)
 * **Resistors / 抵抗:**
     * 2 x 220Ω (for MIDI OUT circuit / MIDI OUT回路用)
-    * 1 x 5.1kΩ (for the Type-C breakout board to enable C-to-C power delivery / C to Cケーブルでの給電有効化用)
+    * (Optional) 2 x 5.1kΩ (for the Type-C breakout board to enable C-to-C power delivery / C to Cケーブルでの給電有効化用)
 
 ### Wiring / 配線
 
@@ -42,10 +43,30 @@ Modern MIDI controllers often connect and are powered via a single USB cable. Ho
     * Connect **3.3V** from the Pico to the **MIDI DIN Pin 4** through a **220Ω resistor**. (Picoの3.3Vを220Ω抵抗を介してDIN 4番ピンに接続)
     * Connect **GND** from the Pico to the **MIDI DIN Pin 2**. (PicoのGNDをDIN 2番ピンに接続)
 2.  **Power / 電源:**
-    * Solder the 5.1kΩ resistor to the CC pin on the Type-C breakout board if it's not already present. (C to Cケーブルでの給電に必要であれば、USB-C基板のCCピンに5.1kΩ抵抗をはんだ付け)
-    * Connect the VBUS and GND from the breakout board to the VSYS and GND pins on the Pico to power it. (USB-C基板のVBUSとGNDをPicoのVSYSとGNDに接続)
-3.  **USB MIDI Host:**
-    * Connect your USB MIDI device to the Pico's main USB port. You will need a USB OTG adapter. (USB MIDIデバイスをPico本体のUSBポートに接続。OTGアダプタが必要です)
+    * Connect a 5V power source and GND to the **VSYS** and **GND** pins on the Pico. (PicoのVSYSピンとGNDピンに5Vの電源を接続)
+
+---
+
+## 🚀 How to Use / 使い方
+
+1.  **Power Up / 電源を接続:**
+    * Connect a 5V power supply to the device. You can use the optional USB Type-C breakout board or any other stable 5V source connected to the Pico's VSYS and GND pins.
+    * 5Vの電源を供給します。オプションのUSB-Cブレークアウト基板を使うか、他の安定した5V電源をPicoのVSYSピンとGNDピンに直接接続してください。
+
+2.  **Connect MIDI Device / MIDI機器を接続:**
+    * Connect your USB MIDI controller (keyboard, etc.) to the Raspberry Pi Pico's USB port using a USB OTG adapter.
+    * USB MIDIキーボードなどのコントローラーを、USB OTGアダプタを介してRaspberry Pi Pico本体のUSBポートに接続します。
+
+3.  **Connect Sound Module / 音源を接続:**
+    * Connect the 5-pin DIN MIDI OUT port to the MIDI IN port of your synthesizer or sound module.
+    * 5ピンDINコネクタを、使用したいシンセサイザーや音源モジュールのMIDI INポートに接続します。
+
+Now you can play your USB MIDI controller, and the notes will be sent to your DIN MIDI hardware!
+これで、USB MIDIコントローラーを演奏すると、その信号がDIN MIDI対応の音源に送られます！
+
+**Note on Power Supply / 電源に関する補足:**
+* The USB Type-C breakout board is an **optional** component for convenient power supply. If you have another way to supply a stable 5V to the Pico's VSYS pin, the breakout board is not necessary. (USB-Cブレークアウト基板は、電源供給を便利にするための**オプション部品**です。PicoのVSYSピンに安定した5Vを供給できる別の方法があれば、必ずしも使う必要はありません。)
+* The 5.1kΩ resistor is only needed to enable power delivery from **USB C-to-C cables**. If you use a USB A-to-C cable or if your breakout board already has this resistor, you don't need to add it. (5.1kΩ抵抗は、**USB C to Cケーブル**での電源供給を有効にするためにのみ必要です。USB A to Cケーブルを使う場合や、使用する基板に既にこの抵抗が実装されている場合は、追加する必要はありません。)
 
 ---
 
