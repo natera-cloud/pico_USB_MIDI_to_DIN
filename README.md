@@ -84,7 +84,8 @@ If you want to modify the code, you'll need to compile it yourself using the Ard
     * **USB Stack:** "Adafruit TinyUSB Host"
 
 #### Libraries / ライブラリ
-* Install the **Adafruit TinyUSB Library** from the Arduino IDE's Library Manager (**Tools > Manage Libraries**). (Arduino IDEのライブラリマネージャから **Adafruit TinyUSB Library** をインストール)
+* **Adafruit TinyUSB Library**: Install this from the Arduino IDE's Library Manager (**Tools > Manage Libraries**). (Arduino IDEのライブラリマネージャからインストール)
+* **rppicomidi/usb_midi_host**: This library needs to be installed manually. Download the ZIP file from the [**GitHub repository**](https://github.com/rppicomidi/usb_midi_host) and install it in the Arduino IDE via **Sketch > Include Library > Add .ZIP Library...**. ([**リポジトリからZIPファイルをダウンロード**](https://github.com/rppicomidi/usb_midi_host)し、Arduino IDEの **スケッチ > ライブラリをインクルード > .ZIP形式のライブラリをインストール...** から手動でインストール)
 
 #### Uploading / 書き込み
 1.  Open the `.ino` sketch file in the Arduino IDE. (`.ino`ファイルをArduino IDEで開く)
