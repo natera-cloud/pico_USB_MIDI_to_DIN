@@ -117,8 +117,6 @@ If you want to modify the code, you'll need to compile it yourself using the Ard
 
 ## 📄 License / ライセンス
 
-This project is licensed under the **Apache License 2.0**. Please see the `LICENSE` file for details.
-このプロジェクトは **Apache License 2.0** の下で公開されています。詳細は`LICENSE`ファイルをご覧ください。
+This project is licensed under the MIT License. Please see the LICENSE file for details. このプロジェクトは MITライセンス の下で公開されています。詳細はLICENSEファイルをご覧ください。
 
-*Note: This software contains code derived from the `pico-usb-midi-host-to-din-midi` sketch by rppicomidi, which is licensed under the MIT License. The original copyright notice is retained in the source file header.*
-*(注: このソフトウェアは、MITライセンスで公開されているrppicomidi氏のスケッチを改変したコードを含んでいます。オリジナルの著作権表示はソースファイルヘッダに保持されています。)*
+Note: This software contains code derived from the pico-usb-midi-host-to-din-midi sketch by rppicomidi, which is also licensed under the MIT License. The original copyright notice is retained in the source file header. (注: このソフトウェアは、同じくMITライセンスで公開されているrppicomidi氏のスケッチを改変したコードを含んでいます。オリジナルの著作権表示はソースファイルヘッダに保持されています。)
